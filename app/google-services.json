@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "641269012411",
+    "firebase_url": "https://fitnoid-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fitnoid",
+    "storage_bucket": "fitnoid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641269012411:android:0ec4cacae868803dd6569e",
+        "android_client_info": {
+          "package_name": "com.example.lar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641269012411-vkmmjs5fij5ilkq8lin3nnpa9lmtl43f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVjDyuaQashvCS5BQ_Fjhl_HJQT1HtkI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641269012411-vkmmjs5fij5ilkq8lin3nnpa9lmtl43f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

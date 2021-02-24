@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LaR</string>
+    <string name="register_page">Register Page</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="please_provide_a_valid_email_to_login_with">Please provide a valid email to login with</string>
+    <string name="the_password_should_contain_mixture_of_capital_letters_and_numbers">The password should contain mixture of capital letters and numbers</string>
+    <string name="login_page">Login Page</string>
+    <string name="email1">Email</string>
+    <string name="password1">Password</string>
+    <string name="login1">Login</string>
+    <string name="not_got_an_account_click_here_to_register">Not got an account? Click here to register.</string>
+    <string name="forgot_password_click_here_and_follow_the_steps">Forgot password? Click here and follow the steps.</string>
+    <string name="registration">Registration</string>
+    <string name="login">Login</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="user_profile">User Profile</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="edit">edit</string>
+    <string name="recent_fitness_tracking_data">Recent Fitness Tracking Data</string>
+    <string name="specific_date_fitness_tracking_data">Specific Date Fitness Tracking Data</string>
+    <string name="input_fitness_tracking_data">Input Fitness Tracking Data</string>
+    <string name="homepage">Homepage</string>
+    <string-array name="spinnerGender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>

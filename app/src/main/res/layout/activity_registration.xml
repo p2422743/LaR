@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/register_page"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+    <EditText
+        android:id="@+id/register_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="35sp"
+        android:inputType="text"
+        android:autofillHints="" />
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="35sp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="@string/email" />
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="35sp"
+        android:autofillHints="@string/password" />
+    <Button
+        android:id="@+id/register_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/teal_200"
+        android:textSize="35sp"
+        app:backgroundTint="?attr/colorControlHighlight" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/please_provide_a_valid_email_to_login_with"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/the_password_should_contain_mixture_of_capital_letters_and_numbers"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textSize="35sp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/homepage"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_marginTop="24dp"
+            android:textColor="@color/black"
+            android:id="@+id/homepage_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25sp"
+            android:autofillHints="" />
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:id="@+id/homepage_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:selectAllOnFocus="false"
+            android:shadowColor="#252525"
+            android:text="@string/user_profile"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:backgroundTint="#ff781f"/>
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:id="@+id/homepage_input_fitness_data"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:selectAllOnFocus="false"
+            android:shadowColor="#252525"
+            android:text="@string/input_fitness_tracking_data"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+                app:backgroundTint="#ff781f" />
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:id="@+id/homepage_recent_fitness_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:selectAllOnFocus="false"
+            android:shadowColor="#252525"
+            android:text="@string/recent_fitness_tracking_data"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:backgroundTint="#ff781f" />
+
+        <Button
+            android:layout_marginTop="24dp"
+            android:id="@+id/homepage_specific_fitness_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:selectAllOnFocus="false"
+            android:shadowColor="#252525"
+            android:text="@string/specific_date_fitness_tracking_data"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:backgroundTint="#ff781f" />
+        <Button
+            android:layout_marginTop="24dp"
+            android:id="@+id/homepage_logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:selectAllOnFocus="false"
+            android:shadowColor="#252525"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:backgroundTint="#ff781f"
+            app:paddingEnd="15dp" />
+    </LinearLayout>
+</ScrollView>
+
+
