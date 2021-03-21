@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textSize="35sp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="Recent Fitness Tracking Data"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/recentfitnessdata_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMinTextSize="25dp"
+            android:autoSizeTextType="uniform"
+            android:autofillHints=""
+            android:hint="Current Weight"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"            />
+
+        <TextView
+            android:id="@+id/recentfitnessdata_current_session_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMinTextSize="25dp"
+            android:autoSizeTextType="uniform"
+            android:hint="Current Session Time"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/recentfitnessdata_calories_intake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMinTextSize="25dp"
+            android:autoSizeTextType="uniform"
+            android:hint="Calories Intake"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/recentfitnessdata_Edit"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp"
+            android:autoSizeMinTextSize="25dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_button"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="#ff781f" />
+
+
+    </LinearLayout>
+</ScrollView>

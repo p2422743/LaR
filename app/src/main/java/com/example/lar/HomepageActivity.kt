@@ -36,26 +36,27 @@ class HomepageActivity : AppCompatActivity() {
 
         userreference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 homepage_name.text = "Welcome " + snapshot.child("name").value.toString()
+
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+//                startActivity(Intent(this@HomepageActivity, LoginActivity::class.java))
+//                finish()
             }
         })
         homepage_user.setOnClickListener {
             startActivity(Intent(this@HomepageActivity, ProfileActivity::class.java))
-
         }
         homepage_logout_button.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this@HomepageActivity, LoginActivity::class.java))
-            finish()
         }
         homepage_input_fitness_data.setOnClickListener {
             startActivity(Intent(this@HomepageActivity, InputFitnessDataActivity::class.java))
-
+        }
+        homepage_recent_fitness_data.setOnClickListener {
+            startActivity(Intent(this@HomepageActivity, RecentFitnessTrackingActivity::class.java))
         }
     }
 

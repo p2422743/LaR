@@ -26,6 +26,8 @@ class InputFitnessDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_inputfitnessdata)
 
 
+
+
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("Tracking Data")
@@ -34,6 +36,7 @@ class InputFitnessDataActivity : AppCompatActivity() {
 
 
     }
+
 
     private fun LoadProfile() {
 
@@ -56,13 +59,13 @@ class InputFitnessDataActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         val currentUserDB = databaseReference?.child((currentUser?.uid!!))
         currentUserDB?.child("TimeStamp")?.setValue(TIMESTAMP)
-       
+
         inputfitnessdata_save.setOnClickListener {
             if (TextUtils.isEmpty(inputfitnessdata_calories_intake.text.toString())) {
             } else
                 currentUserDB?.child("calories_intake")?.setValue(inputfitnessdata_calories_intake.text.toString())
             Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this@InputFitnessDataActivity, ProfileActivity::class.java))
+            startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
 
             finish()
 
@@ -70,7 +73,7 @@ class InputFitnessDataActivity : AppCompatActivity() {
             } else {
                 currentUserDB?.child("current_session_time")?.setValue(inputfitnessdata_current_session_time.text.toString())
                 Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@InputFitnessDataActivity, ProfileActivity::class.java))
+                startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
                 finish()
             }
 
@@ -78,7 +81,7 @@ class InputFitnessDataActivity : AppCompatActivity() {
             } else {
                 currentUserDB?.child("weight")?.setValue(inputfitnessdata_current_session_time.text.toString())
                 Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@InputFitnessDataActivity, ProfileActivity::class.java))
+                startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
                 ServerValue.TIMESTAMP
                 finish()
             }

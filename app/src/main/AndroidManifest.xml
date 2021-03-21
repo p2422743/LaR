@@ -14,6 +14,7 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".EditableProfileActivity" />
+        <activity android:name=".RecentFitnessTrackingActivity" />
         <activity android:name=".HomepageActivity" />
         <activity android:name=".InputFitnessDataActivity" />
         <activity android:name=".LoginActivity" >
