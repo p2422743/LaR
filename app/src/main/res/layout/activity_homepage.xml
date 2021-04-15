@@ -86,20 +86,20 @@
             android:textSize="25sp"
             app:backgroundTint="#ff781f" />
 
-        <Button
-            android:layout_marginTop="24dp"
-            android:id="@+id/homepage_specific_fitness_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_button"
-            android:selectAllOnFocus="false"
-            android:shadowColor="#252525"
-            android:text="@string/specific_date_fitness_tracking_data"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            app:backgroundTint="#ff781f" />
+<!--        <Button-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:id="@+id/homepage_specific_fitness_data"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/rounded_button"-->
+<!--            android:selectAllOnFocus="false"-->
+<!--            android:shadowColor="#252525"-->
+<!--            android:text="@string/specific_date_fitness_tracking_data"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            app:backgroundTint="#ff781f" />-->
         <Button
             android:layout_marginTop="24dp"
             android:id="@+id/homepage_logout_button"

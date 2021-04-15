@@ -20,7 +20,7 @@ class HomepageActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("profile")
+        databaseReference = database?.reference!!.child("Profile")
 
         LoadProfile()
 

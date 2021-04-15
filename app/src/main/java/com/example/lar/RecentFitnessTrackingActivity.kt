@@ -18,7 +18,7 @@ class RecentFitnessTrackingActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("Tracking Data")
+        databaseReference = database?.reference!!.child("Profile")
 
         LoadProfile()
 
@@ -39,7 +39,7 @@ class RecentFitnessTrackingActivity : AppCompatActivity() {
 
                 recentfitnessdata_calories_intake.text  = "Calories Intake: " +  snapshot.child("calories_intake").value.toString()
                 recentfitnessdata_current_session_time.text = "Current Session Time: " + snapshot.child("current_session_time").value.toString()
-                recentfitnessdata_weight.text  = "Current Weight: " +  snapshot.child("weight").value.toString()
+                recentfitnessdata_weight.text  = "Current Weight: " +  snapshot.child("current_weight").value.toString()
 
             }
 

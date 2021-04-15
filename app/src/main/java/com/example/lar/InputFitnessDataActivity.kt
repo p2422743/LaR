@@ -20,7 +20,6 @@ class InputFitnessDataActivity : AppCompatActivity() {
     var database: FirebaseDatabase? = null
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inputfitnessdata)
@@ -30,7 +29,7 @@ class InputFitnessDataActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("Tracking Data")
+        databaseReference = database?.reference!!.child("Profile")
 
         LoadProfile()
 
@@ -77,16 +76,14 @@ class InputFitnessDataActivity : AppCompatActivity() {
                 finish()
             }
 
+
             if (TextUtils.isEmpty(inputfitnessdata_weight.text.toString())) {
             } else {
-                currentUserDB?.child("weight")?.setValue(inputfitnessdata_current_session_time.text.toString())
+                currentUserDB?.child("current_weight")?.setValue(inputfitnessdata_weight.text.toString())
                 Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
-                ServerValue.TIMESTAMP
                 finish()
             }
         }
     }
-
-
 }
