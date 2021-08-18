@@ -58,23 +58,7 @@ class ProfileActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
-//            startActivity(Intent(this@ProfileActivity, ProfileActivityEdit::class.java))
-//
-//        }
 
-//        profile_edit.setOnClickListener {
-//            if (TextUtils.isEmpty(profile_age.text.toString())) {
-//                profile_age.setError("Please enter a valid age.")
-//                return@setOnClickListener
-//            } else if (TextUtils.isEmpty(profile_gender.toString())) {
-//            }
-//            val currentUser = auth.currentUser
-//            val currentUserDB = databaseReference?.child((currentUser?.uid!!))
-//            currentUserDB?.child("age")?.setValue(profile_age.text.toString())
-//            currentUserDB?.child("gender")?.setValue(profile_gender.isSelected.toString())
-//            Toast.makeText(this@ProfileActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-//            finish()
-//        }
         profile_edit.setOnClickListener {
             startActivity(Intent(this@ProfileActivity, EditableProfileActivity::class.java))
 

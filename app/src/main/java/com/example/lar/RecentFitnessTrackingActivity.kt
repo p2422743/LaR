@@ -30,9 +30,6 @@ class RecentFitnessTrackingActivity : AppCompatActivity() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
 
-//        recentfitnessdata_calories_intake.text = "Calories Intake: " + user?.email
-//       recentfitnessdata_current_session_time.text = "Current Session Time: " + user?.email
-//        recentfitnessdata_weight.text = "Current Weight: " + user?.email
 
         userreference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

@@ -74,11 +74,6 @@ class EditableProfileActivity : AppCompatActivity() {
         }
 
 
-//        registerText.setOnClickListener {
-//            startActivity(Intent(this@ProfileActivity, ProfileActivityEdit::class.java))
-//
-//        }
-
         val currentUser = auth.currentUser
         val currentUserDB = databaseReference?.child((currentUser?.uid!!))
 
