@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_registration.*
 class RegistrationActivity : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
-    var databaseReference : DatabaseReference? = null
+    var databaseReference: DatabaseReference? = null
     var database: FirebaseDatabase? = null
 
 
@@ -32,25 +32,36 @@ class RegistrationActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(register_name.text.toString())) {
                 register_name.setError("Please enter a valid name.")
                 return@setOnClickListener
-            } else if(TextUtils.isEmpty(register_email.text.toString())) {
+            } else if (TextUtils.isEmpty(register_email.text.toString())) {
                 register_email.setError("Please enter your email.")
                 return@setOnClickListener
-            } else if(TextUtils.isEmpty(register_password.text.toString())) {
+            } else if (TextUtils.isEmpty(register_password.text.toString())) {
                 register_password.setError("Please enter your password.")
                 return@setOnClickListener
             }
-            auth.createUserWithEmailAndPassword(register_email.text.toString(), register_password.text.toString())
+            auth.createUserWithEmailAndPassword(
+                register_email.text.toString(),
+                register_password.text.toString()
+            )
                 .addOnCompleteListener {
-                    if(it.isSuccessful) {
+                    if (it.isSuccessful) {
                         val currentUser = auth.currentUser
                         val currentUserDB = databaseReference?.child((currentUser?.uid!!))
                         currentUserDB?.child("name")?.setValue(register_name.text.toString())
                         currentUserDB?.child("email")?.setValue(register_email.text.toString())
-                        Toast.makeText(this@RegistrationActivity, "Registration successful! ", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this@RegistrationActivity,
+                            "Registration successful! ",
+                            Toast.LENGTH_LONG
+                        ).show()
                         finish()
 
                     } else {
-                        Toast.makeText(this@RegistrationActivity, "Registration failed, please try again! ", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this@RegistrationActivity,
+                            "Registration failed, please try again! ",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
         }

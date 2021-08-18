@@ -62,26 +62,56 @@ class InputFitnessDataActivity : AppCompatActivity() {
         inputfitnessdata_save.setOnClickListener {
             if (TextUtils.isEmpty(inputfitnessdata_calories_intake.text.toString())) {
             } else
-                currentUserDB?.child("calories_intake")?.setValue(inputfitnessdata_calories_intake.text.toString())
-            Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
+                currentUserDB?.child("calories_intake")
+                    ?.setValue(inputfitnessdata_calories_intake.text.toString())
+            Toast.makeText(
+                this@InputFitnessDataActivity,
+                "Profile save successful! ",
+                Toast.LENGTH_LONG
+            ).show()
+            startActivity(
+                Intent(
+                    this@InputFitnessDataActivity,
+                    RecentFitnessTrackingActivity::class.java
+                )
+            )
 
             finish()
 
             if (TextUtils.isEmpty(inputfitnessdata_current_session_time.text.toString())) {
             } else {
-                currentUserDB?.child("current_session_time")?.setValue(inputfitnessdata_current_session_time.text.toString())
-                Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
+                currentUserDB?.child("current_session_time")
+                    ?.setValue(inputfitnessdata_current_session_time.text.toString())
+                Toast.makeText(
+                    this@InputFitnessDataActivity,
+                    "Profile save successful! ",
+                    Toast.LENGTH_LONG
+                ).show()
+                startActivity(
+                    Intent(
+                        this@InputFitnessDataActivity,
+                        RecentFitnessTrackingActivity::class.java
+                    )
+                )
                 finish()
             }
 
 
             if (TextUtils.isEmpty(inputfitnessdata_weight.text.toString())) {
             } else {
-                currentUserDB?.child("current_weight")?.setValue(inputfitnessdata_weight.text.toString())
-                Toast.makeText(this@InputFitnessDataActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@InputFitnessDataActivity, RecentFitnessTrackingActivity::class.java))
+                currentUserDB?.child("current_weight")
+                    ?.setValue(inputfitnessdata_weight.text.toString())
+                Toast.makeText(
+                    this@InputFitnessDataActivity,
+                    "Profile save successful! ",
+                    Toast.LENGTH_LONG
+                ).show()
+                startActivity(
+                    Intent(
+                        this@InputFitnessDataActivity,
+                        RecentFitnessTrackingActivity::class.java
+                    )
+                )
                 finish()
             }
         }

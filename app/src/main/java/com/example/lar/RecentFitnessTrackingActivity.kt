@@ -34,9 +34,12 @@ class RecentFitnessTrackingActivity : AppCompatActivity() {
         userreference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                recentfitnessdata_calories_intake.text  = "Calories Intake: " +  snapshot.child("calories_intake").value.toString()
-                recentfitnessdata_current_session_time.text = "Current Session Time: " + snapshot.child("current_session_time").value.toString()
-                recentfitnessdata_weight.text  = "Current Weight: " +  snapshot.child("current_weight").value.toString()
+                recentfitnessdata_calories_intake.text =
+                    "Calories Intake: " + snapshot.child("calories_intake").value.toString()
+                recentfitnessdata_current_session_time.text =
+                    "Current Session Time: " + snapshot.child("current_session_time").value.toString()
+                recentfitnessdata_weight.text =
+                    "Current Weight: " + snapshot.child("current_weight").value.toString()
 
             }
 
@@ -46,7 +49,12 @@ class RecentFitnessTrackingActivity : AppCompatActivity() {
         })
 
         recentfitnessdata_Edit.setOnClickListener {
-            startActivity(Intent(this@RecentFitnessTrackingActivity, InputFitnessDataActivity::class.java))
+            startActivity(
+                Intent(
+                    this@RecentFitnessTrackingActivity,
+                    InputFitnessDataActivity::class.java
+                )
+            )
 
         }
     }

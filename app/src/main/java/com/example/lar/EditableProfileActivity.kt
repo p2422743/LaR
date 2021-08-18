@@ -43,8 +43,10 @@ class EditableProfileActivity : AppCompatActivity() {
                 editableprofile_name.hint = snapshot.child("name").value.toString()
                 editableprofile_age.hint = snapshot.child("age").value.toString()
                 editableprofile_gender.prompt = snapshot.child("gender").value.toString()
-                editableprofile_current_weight.hint = snapshot.child("current_weight").value.toString()
-                editableprofile_target_weight.hint = snapshot.child("target_weight").value.toString()
+                editableprofile_current_weight.hint =
+                    snapshot.child("current_weight").value.toString()
+                editableprofile_target_weight.hint =
+                    snapshot.child("target_weight").value.toString()
 
             }
 
@@ -61,14 +63,23 @@ class EditableProfileActivity : AppCompatActivity() {
             spinner.adapter = adapter
 
             spinner.onItemSelectedListener = object :
-                    AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
                     (parent.getChildAt(0) as TextView).setTextColor(Color.BLACK)
                     (parent.getChildAt(0) as TextView).textSize = 25f
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
-                    Toast.makeText(this@EditableProfileActivity, "Select a gender.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@EditableProfileActivity,
+                        "Select a gender.",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
         }
@@ -109,10 +120,17 @@ class EditableProfileActivity : AppCompatActivity() {
             } else {
                 currentUserDB?.child("age")?.setValue(editableprofile_age.text.toString())
                 currentUserDB?.child("name")?.setValue(editableprofile_name.text.toString())
-                currentUserDB?.child("current_weight")?.setValue(editableprofile_current_weight.text.toString())
-                currentUserDB?.child("target_weight")?.setValue(editableprofile_target_weight.text.toString())
-                currentUserDB?.child("gender")?.setValue(editableprofile_gender.selectedItem.toString())
-                Toast.makeText(this@EditableProfileActivity, "Profile save successful! ", Toast.LENGTH_LONG).show()
+                currentUserDB?.child("current_weight")
+                    ?.setValue(editableprofile_current_weight.text.toString())
+                currentUserDB?.child("target_weight")
+                    ?.setValue(editableprofile_target_weight.text.toString())
+                currentUserDB?.child("gender")
+                    ?.setValue(editableprofile_gender.selectedItem.toString())
+                Toast.makeText(
+                    this@EditableProfileActivity,
+                    "Profile save successful! ",
+                    Toast.LENGTH_LONG
+                ).show()
                 startActivity(Intent(this@EditableProfileActivity, ProfileActivity::class.java))
             }
         }

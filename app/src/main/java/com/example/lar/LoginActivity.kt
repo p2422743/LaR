@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
-        if(currentUser != null) {
+        if (currentUser != null) {
             startActivity(Intent(this@LoginActivity, HomepageActivity::class.java))
             finish()
         }
@@ -31,26 +31,32 @@ class LoginActivity : AppCompatActivity() {
 
     private fun login() {
         login_button.setOnClickListener {
-            if(TextUtils.isEmpty(login_email.text.toString())){
+            if (TextUtils.isEmpty(login_email.text.toString())) {
                 login_email.setError("Please enter an email.")
                 return@setOnClickListener
-            }
-            else if (TextUtils.isEmpty(login_password.text.toString())){
+            } else if (TextUtils.isEmpty(login_password.text.toString())) {
                 login_password.setError("Please enter a password.")
-                    return@setOnClickListener
+                return@setOnClickListener
             }
-            auth.signInWithEmailAndPassword(login_email.text.toString(),login_password.text.toString())
+            auth.signInWithEmailAndPassword(
+                login_email.text.toString(),
+                login_password.text.toString()
+            )
                 .addOnCompleteListener {
-                    if(it.isSuccessful) {
+                    if (it.isSuccessful) {
                         startActivity(Intent(this@LoginActivity, HomepageActivity::class.java))
                         finish()
                     } else {
-                        Toast.makeText(this@LoginActivity, "Login failed, please try again! ", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            this@LoginActivity,
+                            "Login failed, please try again! ",
+                            Toast.LENGTH_LONG
+                        ).show()
 
                     }
                 }
         }
-        registerText.setOnClickListener{
+        registerText.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegistrationActivity::class.java))
 
         }

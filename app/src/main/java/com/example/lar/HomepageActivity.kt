@@ -41,8 +41,6 @@ class HomepageActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-//                startActivity(Intent(this@HomepageActivity, LoginActivity::class.java))
-//                finish()
             }
         })
         homepage_user.setOnClickListener {
